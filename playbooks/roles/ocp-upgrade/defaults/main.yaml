@@ -1,9 +1,17 @@
 ---
 # defaults file
 
+eus_upgrade_version: ""
+eus_upgrade_channel: ""
+eus_upgrade_image: ""
+eus_upstream: ""
 upgrade_version: ""
 upgrade_channel: ""
 upgrade_image: ""
 pause_time: 90
 delay_time: 600
-
+restricted_network_upgrade: false
+architecture: "ppc64le"
+local_secret: ""
+local_registry: ""
+local_repository: "ocp4/openshift4"

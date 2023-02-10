@@ -9,6 +9,12 @@
       - gcc
     state: present
 
+- name: Install python packages
+  become: true
+  pip:
+    executable: pip3
+    name: oauthlib==3.2.0
+
 - name: Install openshift python module
   become: true
   pip:
@@ -53,3 +59,7 @@
       loop:
         - master
         - worker
+
+- name: Automate Node Labels
+  when: node_labels
+  import_tasks: node-label.yaml
